@@ -1,7 +1,0 @@
-objc[75406]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
-2013-12-01 18:22:01.266 toolBox[75406:80b] Cannot find executable for CFBundle 0xa5647d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
-2013-12-01 18:22:01.277 toolBox[75406:80b] Cannot find executable for CFBundle 0xb85d7b0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
-2013-12-01 18:22:01.574 toolBox[75406:80b] Multi-tasking -> Device: YES, App: YES
-2013-12-01 18:22:01.762 toolBox[75406:80b] Unlimited access to network resources
-2013-12-01 18:22:04.661 toolBox[75406:80b] Resetting plugins due to page load.
-2013-12-01 18:22:05.418 toolBox[75406:80b] Finished load of: file:///Users/nazirshuqair/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/2BDFDD98-8379-4B22-A6E4-D69759AF645D/toolBox.app/www/index.html
