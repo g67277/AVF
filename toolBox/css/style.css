@@ -1,0 +1,10 @@
+// write your CSS in here
+
+label.error{
+	font-size:40px;
+	color:#F00;
+};
+
+p.title{
+	color:#0F0;
+};
