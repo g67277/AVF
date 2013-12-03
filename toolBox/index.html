@@ -4,18 +4,19 @@
 
 	<meta charset="utf-8">
 	
-	<title>La Ferrari</title>
+	<title>Tool Box</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Hello World</title>
 	
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.css" />
     <link rel="stylesheet" href="css/style.css" />
     
 	
@@ -27,186 +28,54 @@
 </head>
 <body>
 
-	<div data-role="page" id="home" >
-    	<div data-role="panel" id="mypanel" data-position="left" data-position-fixed="true" data-theme="a">
+	<page data-role="page" id="home" >
+    	<panel data-role="panel" id="mypanel" data-position="left" data-position-fixed="true" data-theme="a">
         	<ul data-role="listview" data-inset="false" data-theme="a">
                     <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
                         <li><a href="#change" data-icon="gear">Change</a></li>
                         <li><a href="#search" data-icon="search">Search</a></li>
                  </ul>
-        </div>
-            <div data-role="header" data-theme="e">
-                <h1>La Ferrari</h1>
+        </panel>
+            <header data-role="header" data-theme="e">
+                <h1>Tool Box</h1>
                 <a href="#mypanel">Open panel</a>
-            </div>
-            <div data-role="content">
-                <p class="title">La Ferrari is the most arodynamic car designed by Ferrari, inspired by F1</p>
+            </header>
+            <section data-role="content">
                 <ul data-role="listview" data-inset="true" data-filter="true">
-                    <li data-role="list-divider">Working</li>
                     <li>
                         <a href="#engine">
-                            <img src="images/ct_laferrari_hy_kers_system_06_exhaust_system.jpg" />
-                            <h3>La Ferrari Engine</h3>
-                            <span class="ui-li-count">8</span>
+                            <h3>Camera</h3>
                         </a>
                     </li>
-                    <li><a href="#buy"><h3>Buy!!!</h3></a></li>
+                    <li>
+                        <a href="#engine">
+                            <h3>Twitter</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#engine">
+                            <h3>Accelerometer</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#engine">
+                            <h3>Compass</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#engine">
+                            <h3>GeoLocation</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#engine">
+                            <h3>Research</h3>
+                        </a>
+                    </li>
                  </ul>
-            </div>
-            
-            </div>
+            </section>
         
-    </div>
-    
-    <div data-role="page" id="engine" data-add-back-btn="true">
-    	<div data-role="header" data-theme="e">
-        	<h1>Engine</h1>
-        </div>
-        <div data-role="content">
-        	<div data-role="collapsible-set" data-filter="true">
-                <div data-role="collapsible" data-collapsed="true" data-theme="a">
-                    <h3>KRES</h3>
-                    <p>The Engine is speacially designed to take advantage of the new F1 KERS system</p>
-                </div>
-                <div data-role="collapsible" data-collapsed="true" data-theme="a">
-                    <h3>HP</h3>
-                    <p>La Ferrari engine boosts 600hp</p>
-                </div>
-            </div>
-        </div>
-        <div data-role="footer" data-position="fixed" data-theme="e" data-id="main">
-        	<div data-role="navbar">
-            	<ul>
-                	<li><a href="#home" data-icon="home">Home</a></li>
-                    <li><a href="#change" data-icon="gear">Change</a></li>
-					<li><a href="#search" data-icon="search">Search</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div data-role="page" id="change" data-add-back-btn="true">
-   		<div data-role="header" data-theme="e">
-        	<h1>Change</h1>
-        </div>
-        <div data-role="content">
-        	<p>Changes will be done here</p>
-        </div>
-    	<div data-role="footer" data-position="fixed" data-theme="e" data-id="main">
-        	<div data-role="navbar">
-            	<ul>
-                	<li><a href="#home" data-icon="home">Home</a></li>
-                    <li><a href="#change" data-icon="gear" class="ui-btn-active">Change</a></li>
-					<li><a href="#search" data-icon="search">Search</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div data-role="page" id="search" data-add-back-btn="true">
-    	<div data-role="header" data-theme="e">
-        	<h1>Search</h1>
-        </div>
-        <div data-role="content">
-        	<p>This is the search page</p>
-        </div>
-    	<div data-role="footer" data-position="fixed" data-theme="e" data-id="main">
-        	<div data-role="navbar">
-            	<ul>
-                	<li><a href="#home" data-icon="home">Home</a></li>
-                    <li><a href="#change" data-icon="gear" >Change</a></li>
-					<li><a href="#search" data-icon="search" class="ui-btn-active">Search</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div data-role="page" id="buy" data-add-back-btn="true">
-    	<div data-role="header" data-theme="e">
-        	<h1>Rich enough to Buy!</h1>
-        </div>
-        <div data-role="content">
-        	<form action="" id="buyNow">
-            	<div data-role="fieldcontain">
-                	<label for="fDate">Date:</label>
-                    <input type="date" name="fDate" id="fDate" value=""/>
-                </div>
-            	<div data-role="fieldcontain">
-                	<label for="member">Already a member?</label>
-                    <select data-role="slider">
-                    	<option value="off">No</option>
-                        <option value="on">Yes</option>
-                    </select>
-                </div>
-            	<div data-role="fieldcontain">
-                    <label for="custName" >Name:</label>
-                    <input type="text" name="custName" id="custName" class="required"/>
-                </div>
-                <div data-role="fieldcontain">
-                    <label for="phoneNum">Phone Number:</label>
-                    <input type="text" name="phoneNum" id="phoneNum" class="required number">
-                </div>
-                <div data-role="fieldcontain">
-                	<label for="sNeeds">Special Needs:</label>
-                    <textarea></textarea>
-                </div>
-                <div data-role="fieldcontain">
-                	<label for="searchFields">Search</label>
-               		<input type="search" name="searchFields" />
-                </div>
-                <div data-role="fieldcontain">
-                	<label for="priceRange">Price Range:</label>
-                	<input type="range" name="priceRange" id="priceRange" value="60K" min="60K" max="999k"/>
-                </div>
-                <div data-role="fieldcontain">
-                	<fieldset data-role="controlgroup" data-type="horizontal">
-                    	<legend>Job Title: </legend>
-                        <input type="radio" value="IT" name="job" id="job1" />
-                        <label for="job1">IT</label>
-                        <input type="radio" value="CEO" name="job" id="job2" />
-                        <label for="job2">CEO</label>
-                        <input type="radio" value="No Need" name="job" id="job3" />
-                        <label for="job3">No Need</label>
-                    </fieldset>
-                </div>
-                
-                <div data-role="fieldcontain">
-                	<fieldset data-role="controlgroup">
-                    	<legend>Pakage: </legend>
-                        <input type="checkbox" value="sport" name="pkg" id="pkg1" />
-                        <label for="pkg1">Sport package</label>
-                        <input type="checkbox" value="comfort" name="pkg" id="pkg2" />
-                        <label for="pkg2">Comfort package</label>
-                        <input type="checkbox" value="speed" name="pkg" id="pkg3" />
-                        <label for="pkg3">Speed package</label>
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                	<label for="model">Choose Model</label>
-                    	<select name="model" id="model">
-                        	<option data-placeholder="true">Select</option>
-                        	<optgroup label="Modern">        
-                                <option value="f458">Ferrari F458</option>
-                                <option value="gto">Ferrari GTO</option>
-                                <option value="laFerrari">La Ferrari</option>
-                            </optgroup>
-                            <optgroup label="Classic">        
-                                <option value="f10">Ferrari F10</option>
-                                <option value="gto">Ferrari GTO</option>
-                                <option value="enzo">Ferrari ENZO</option>
-                            </optgroup>
-                            
-                        </select>
-                </div>
-                
-                <a href="#" data-role="button" data-inline="true" data-icon="star">Inline + icon</a>
-				<a href="#" data-role="button" data-inline="true" data-theme="b" data-mini="true">Mini + theme</a>
-				
-
-                <input type="reset" value="reset" data-theme="a" />
-                <input type="submit" value="submit" data-theme="b" />
-            </form>
-        </div>
-    </div>
+    </page>
 	
 
 	<!-- JavaScript under here -->
