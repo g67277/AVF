@@ -11,9 +11,44 @@
     *zoom: 1;
 }
 
-/* Basic Styles */
 body {
 	background-color: #ece8e5;
+}
+
+#mainH{
+	height: 40px;
+	width: 100%;
+	background: #09F;
+}
+
+header h1 {
+	color:#FC0;
+	margin-top: 4%;
+}
+
+#hLink {
+	padding: 0;
+	list-style-type:none;
+}
+
+.homeLinks {
+	 float:left;
+  	width: 24.621642969984202211%;
+	color: #fff;
+	display: inline-block;
+	
+}
+
+.homeLinks a{
+	text-align: center;
+	text-decoration:none;
+	line-height: 40px;
+	box-sizing:border-box;
+}
+
+/* Basic Styles */
+#instagram {
+	background-color: #09F;
 }
 nav {
 	height: auto;
@@ -73,7 +108,8 @@ a#homeSc:before {
 		display: inline-block;
 		position: relative;
 		left: 50%;
-		top: 4px;
+		top: 10px;
+		
 }
 nav a#pull:after {
 		content:"";
@@ -84,7 +120,41 @@ nav a#pull:after {
 		position: absolute;
 		right: 15px;
 		top: 10px;
+		border:dashed;
 	}
+#mstgBack{
+	background: #FFF;
+}
+	
+#data-output{
+	background:#FFF;
+	list-style-type:none;
+	margin-left: 5%;
+}
+
+#figure{
+	content:"";
+  float:left;
+  margin: -.2% -4%;   /* 21px / 633px */
+  width: 23.621642969984202211%;             /* 197px / 633px */
+	
+}
+
+/*Twitter*********************/
+.twitter-timeline{
+	margin-left: 20%;
+}
+
+
+/*Styles for screen 800px and lower*/
+@media screen and (max-width: 800px){
+	#figure{
+	  margin: -.2% -4%;   /* 21px / 633px */
+	  width: 27.621642969984202211%;             /* 197px / 633px */
+		
+	}
+	
+}
 
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 600px) {
@@ -116,6 +186,12 @@ nav a#pull:after {
 		width: 100%;
 	}
 	
+	#figure{
+	  margin: -.2% -2.7%;   /* 21px / 633px */
+	  width: 33.321642969984202211%;             /* 197px / 633px */
+		
+	}
+	
 }
 
 /*Styles for screen 515px and lower*/
@@ -138,18 +214,26 @@ nav a#pull:after {
 		float: none;
 		width: 100%;
 	}
+	#figure{
+	  margin: -.3% ;   /* 21px / 633px */
+	  width: 37.321642969984202211%;             /* 197px / 633px */
+		
+	}
 	
 }
 
-#data-output{
-	list-style-type:none;
+/*Styles for screen 320px and lower*/
+@media only screen and (max-width : 320px) {
+	#data-output{
+		padding-left: 5%;
+		margin-left: -5%;
+	}
+	#figure{
+	  margin: 0 ;   /* 21px / 633px */
+	  width: 48.321642969984202211%;             /* 197px / 633px */
+		
+	}
 }
 
-#figure{
-  float:left;
-  display:block;
-  margin: 0 1% 1%;   /* 21px / 633px */
-  width: 29.121642969984202211%;             /* 197px / 633px */
-	
-}
+
 
