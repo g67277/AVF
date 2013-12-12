@@ -30,6 +30,9 @@
     <feature name="Accelerometer">
         <param name="ios-package" value="CDVAccelerometer" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <name>toolBox</name>
     <description>
         Hello World sample application that responds to the deviceready event.

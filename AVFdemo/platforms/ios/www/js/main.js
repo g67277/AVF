@@ -106,6 +106,8 @@ $(document).on('pageinit', '#compass', function () {
                'Heading: '            + position.coords.heading               + '<br />' +
                'Speed: '              + position.coords.speed                 + '<br />' +
                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
+               
+               alert("testing");
                }
                
                // onError Callback receives a PositionError object
