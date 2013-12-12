@@ -96,6 +96,12 @@ $(document).on('pageinit', '#weather', function () {
 	console.log(menu);
 	menuPull(pull, menu); 
 	
+	/*var urltest = "http://dev.virtualearth.net/REST/v1/Locations/39.07591136387547,-77.48486660460367?o=json&key=BingMapsKey";
+	
+	$.getJSON(urltest, function(response){
+		alert(response);
+	})*/
+	
 	var query = escape('select item from weather.forecast where location="CAXX0518"'),
     url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%3D%2220176%22&format=json"; 
 
@@ -145,4 +151,37 @@ var menuPull = function(e, c){
 		}  
 	}); 
 }
+
+//***********************Test**************************
+
+// Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + new Date(position.timestamp)          + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
 
