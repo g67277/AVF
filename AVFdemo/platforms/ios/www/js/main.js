@@ -76,11 +76,19 @@ $(document).on('pageinit', '#accelerometer', function () {
 
                });
 
+<<<<<<< HEAD
 $(document).on('pageinit', '#compass', function () {
                
                var pull = $('#pull4');
                console.log(pull);
                var menu = $('#compass header nav ul');
+=======
+$(document).on('pageinit', '#geo', function () {
+               
+               var pull = $('#pull4');
+               console.log(pull);
+               var menu = $('#geo header nav ul');
+>>>>>>> gh-pages
                console.log(menu);
                menuPull(pull, menu);
                
@@ -107,7 +115,11 @@ $(document).on('pageinit', '#compass', function () {
                'Speed: '              + position.coords.speed                 + '<br />' +
                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
                
+<<<<<<< HEAD
                alert("testing");
+=======
+               alert("Here are your position details");
+>>>>>>> gh-pages
                }
                
                // onError Callback receives a PositionError object
@@ -142,6 +154,11 @@ $(document).on('pageinit', '#weather', function () {
                          $("#weather-output").prepend(weather);
                          });
                
+<<<<<<< HEAD
+=======
+               alert("Here's the weather for Lansdown");
+               
+>>>>>>> gh-pages
                });
 
 $(document).on('pageinit', '#research', function () {

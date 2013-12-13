@@ -63,6 +63,13 @@ h3{
 	color:#0C0;
 }
 
+#accList{
+    font-family:"MS Serif", "New York", serif;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #283744;
+}
+
 #weather-data{
 	
 	border: 1px solid #FFF;
@@ -80,6 +87,17 @@ h3{
 	font-size: 20px;
 	color:#fff;
 }
+
+#geolocation{
+    font-size: 20px;
+	color:#fff;
+}
+
+.researchC{
+    font-size: 20px;
+	color:#fff;
+}
+
 
 
 /* Basic Styles */

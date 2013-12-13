@@ -58,6 +58,7 @@ $(document).on('pageinit', '#instagram', function () {
                
                });
 
+<<<<<<< HEAD
 $(document).on('pageinit', '#twitter', function () {
                
                
@@ -81,6 +82,14 @@ $(document).on('pageinit', '#compass', function () {
                var pull = $('#pull4');
                console.log(pull);
                var menu = $('#compass header nav ul');
+=======
+
+$(document).on('pageinit', '#geo', function () {
+               
+               var pull = $('#pull4');
+               console.log(pull);
+               var menu = $('#geo header nav ul');
+>>>>>>> gh-pages
                console.log(menu);
                menuPull(pull, menu);
                
@@ -107,7 +116,10 @@ $(document).on('pageinit', '#compass', function () {
                'Speed: '              + position.coords.speed                 + '<br />' +
                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
                
+<<<<<<< HEAD
                alert("testing");
+=======
+>>>>>>> gh-pages
                }
                
                // onError Callback receives a PositionError object
