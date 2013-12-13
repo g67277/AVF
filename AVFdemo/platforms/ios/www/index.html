@@ -52,8 +52,8 @@
                         </a>
                     </li>
                     <li class="homeLinks">
-                        <a href="#compass">
-                            <h3>Compass</h3>
+                        <a href="#geo">
+                            <h3>GeoLocation</h3>
                         </a>
                     </li>
                     <li class="homeLinks">
@@ -66,13 +66,7 @@
                             <h3>Research</h3>
                         </a>
                     </li>
-                    <!--<li data-role="list-divider">Data APIs</li>
-                     <li>
-                     <h3>AccuWeather API</h3>
-                     </li>
-                     <li>
-                     <h3>Google Maps API</h3>
-                     </li>-->
+                    
                 </ul>
             </section>
             
@@ -83,11 +77,11 @@
                     <ul class="clearfix">
                         <li><a href="#home">Home</a>
                         </li>
-                        <li><a href="camera.html">Camera</a>
+                        <li><a href="camera.html" data-ajax="false">Camera</a>
                         </li>
-                        <li><a href="#accelerometer">Accelerometer</a>
+                        <li><a href="accelerometer.html" data-ajax="false">Accelerometer</a>
                         </li>
-                        <li><a href="#compass">Compass</a>
+                        <li><a href="#geo">GeoLocation</a>
                         </li>
                         <li><a href="#weather">Weather</a>
                         </li>
@@ -105,7 +99,7 @@
                 </ul>
             </section>
         </page>
-        <page data-role="page" id="accelerometer">
+        <page data-role="page" id="geo">
             <header>
                 <nav class="clearfix">
                     <ul class="clearfix">
@@ -113,35 +107,9 @@
                         </li>
                         <li><a href="#instagram">Instagram</a>
                         </li>
-                        <li><a href="camera.html">Camera</a>
+                        <li><a href="camera.html" data-ajax="false">Camera</a>
                         </li>
-                        <li><a href="#compass">Compass</a>
-                        </li>
-                        <li><a href="#weather">Weather</a>
-                        </li>
-                        <li><a href="#research">Research</a>
-                        </li>
-                    </ul>
-                    <a href="#" id="pull3"></a>
-                </nav>
-                <a href="#home" id="homeSc"></a>
-                
-            </header>
-            <section data-role="content">
-                <p>getCurrentAcceleration</p>
-            </section>
-        </page>
-        <page data-role="page" id="compass">
-            <header>
-                <nav class="clearfix">
-                    <ul class="clearfix">
-                        <li><a href="#home">Home</a>
-                        </li>
-                        <li><a href="#instagram">Instagram</a>
-                        </li>
-                        <li><a href="camera.html">Camera</a>
-                        </li>
-                        <li><a href="#accelerometer">Accelerometer</a>
+                        <li><a href="accelerometer.html" data-ajax="false">Accelerometer</a>
                         </li>
                         <li><a href="#weather">Weather</a>
                         </li>
@@ -165,11 +133,11 @@
                         </li>
                         <li><a href="#instagram">Instagram</a>
                         </li>
-                        <li><a href="camera.html">Camera</a>
+                        <li><a href="camera.html" data-ajax="false">Camera</a>
                         </li>
-                        <li><a href="#accelerometer">Accelerometer</a>
+                        <li><a href="accelerometer.html" data-ajax="false">Accelerometer</a>
                         </li>
-                        <li><a href="#compass">Compass</a>
+                        <li><a href="#geo">GeoLocation</a>
                         </li>
                         <li><a href="#research">Research</a>
                         </li>
@@ -191,11 +159,11 @@
                         </li>
                         <li><a href="#instagram">Instagram</a>
                         </li>
-                        <li><a href="camera.html">Camera</a>
+                        <li><a href="camera.html data-ajax="false"">Camera</a>
                         </li>
-                        <li><a href="#accelerometer">Accelerometer</a>
+                        <li><a href="accelerometer.html data-ajax="false"">Accelerometer</a>
                         </li>
-                        <li><a href="#compass">Compass</a>
+                        <li><a href="#geo">GeoLocation</a>
                         </li>
                         <li><a href="#weather">Weather</a>
                         </li>
@@ -205,15 +173,18 @@
                 <a href="#home" id="homeSc"></a>
                 
             </header>
+            </header>
             <section data-role="content" data-theme="c">
                 <list data-role="collapsible-set">
                     <div data-role="collapsible" data-collapsed="true" data-theme="c">
-                        <h3>How could Twitter be used in these two scenarios?</h3>
-                        <p>Governments and business organizations have been implementing a process called SSO (Single Sign On) which is a session/user authentication hat permits a user to enter one name and password in order to access multiple applications.
-                        Leveraging twitter for logins follows the same line of SSO, in which users don’t have to keep track of multiple accounts making it easier to work and interact with a multitude of apps.
-                        </p>
-                    </div>
-                </list>
+                        <h3>Disscussion 1</h3>
+                        <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                            <h3>How could Twitter be used in these two scenarios?</h3>
+                            <p>Governments and business organizations have been implementing a process called SSO (Single Sign On) which is a session/user authentication hat permits a user to enter one name and password in order to access multiple applications.
+                            Leveraging twitter for logins follows the same line of SSO, in which users don’t have to keep track of multiple accounts making it easier to work and interact with a multitude of apps.
+                            </p>
+                        </div>
+                        </list>
                 <list data-role="collapsible-set">
                     <div data-role="collapsible" data-collapsed="true" data-theme="c">
                         <h3>Why would we need JSON-P, specifically?</h3>
@@ -239,8 +210,41 @@
                         <p>Having a workflow set-up has helped me stop overthinking projects as I have done in the past.</p>
                     </div>
                 </list>
-            </section>
-        </page>
+                </div>
+                
+                <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                    <h3>Disscussion 2</h3>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                        <h3>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</h3>
+                        <p>Adding Alt attribute to my images, appropriate link text, and proper use of headings would probably make my app more accessible
+                        </p>
+                    </div>
+                    </list>
+                    <list data-role="collapsible-set">
+                        <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                            <h3>Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h3>
+                            <p>Based on the research “Blind user frustration of the web”, Page layout, Forms design and Reader failures are among the top 3 most common frustrations.  Page layout causing confusing screen reader feedback ranks at number 1 as it causes the reader to spit out a lot of useless information, wasting the user’s time. Poorly designed/unlabeled form makes it near impossible for blind users to interact with or complete a form.
+                            </p>
+                        </div>
+                    </list>
+                    <list data-role="collapsible-set">
+                        <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                            <h3>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h3>
+                            <p>According to mobileaccessibility.info the Samsung Model: SM-N900A and Samsung Model: SCH-I545 are at 92% compliant with all the accessibility features out there.  These 2 devices have everything from Easy to Press Keys, Predictive Text Input, Voice recognition for accessing features and Key Feedback - Audible to Simplify display and High contrast mode.å
+                            </p>
+                            </div>
+                            </list>
+                            <list data-role="collapsible-set">
+                            <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                            <h3>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h3>
+                            <p>TalkBack: This application adds spoken, audible, and vibration feedback to the device.
+                            
+                            Voice Brief: Is a great utility for the vision impaired. With the touch of a button Voice Brief reads your email, Twitter feed, weather, stock prices, RSS and Facebook feeds.
+                            </p>
+                            </div>
+                            </list>
+                            </div>
+                            </section>        </page>
         
         
         <!-- JavaScript under here -->

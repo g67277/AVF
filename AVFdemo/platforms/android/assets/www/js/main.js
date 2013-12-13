@@ -58,29 +58,12 @@ $(document).on('pageinit', '#instagram', function () {
                
                });
 
-$(document).on('pageinit', '#twitter', function () {
-               
-               
-               
-                              
-               
-               });
 
-$(document).on('pageinit', '#accelerometer', function () {
-               
-               var pull = $('#pull3');
-               console.log(pull);
-               var menu = $('#accelerometer header nav ul');
-               console.log(menu);
-               menuPull(pull, menu);
-
-               });
-
-$(document).on('pageinit', '#compass', function () {
+$(document).on('pageinit', '#geo', function () {
                
                var pull = $('#pull4');
                console.log(pull);
-               var menu = $('#compass header nav ul');
+               var menu = $('#geo header nav ul');
                console.log(menu);
                menuPull(pull, menu);
                
@@ -107,7 +90,6 @@ $(document).on('pageinit', '#compass', function () {
                'Speed: '              + position.coords.speed                 + '<br />' +
                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
                
-               alert("testing");
                }
                
                // onError Callback receives a PositionError object
