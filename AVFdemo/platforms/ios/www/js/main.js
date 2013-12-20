@@ -58,23 +58,7 @@ $(document).on('pageinit', '#instagram', function () {
                
                });
 
-$(document).on('pageinit', '#twitter', function () {
-               
-               
-               
-                              
-               
-               });
 
-$(document).on('pageinit', '#accelerometer', function () {
-               
-               var pull = $('#pull3');
-               console.log(pull);
-               var menu = $('#accelerometer header nav ul');
-               console.log(menu);
-               menuPull(pull, menu);
-
-               });
 
 $(document).on('pageinit', '#geo', function () {
                
@@ -111,7 +95,6 @@ $(document).on('pageinit', '#geo', function () {
                'Heading: '            + position.coords.heading               + '<br />' +
                'Speed: '              + position.coords.speed                 + '<br />' +
                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
-               
                alert("Here are your position details");
                }
                
@@ -134,7 +117,7 @@ $(document).on('pageinit', '#weather', function () {
                menuPull(pull, menu);
                
                onDeviceReady();
-               
+
                // PhoneGap is ready
                //
                function onDeviceReady() {
@@ -172,8 +155,6 @@ $(document).on('pageinit', '#weather', function () {
                alert('code: '    + error.code    + '\n' +
                      'message: ' + error.message + '\n');
                }
-
-                         
                 });
                
               
