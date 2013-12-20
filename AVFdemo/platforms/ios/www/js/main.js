@@ -98,7 +98,12 @@ $(document).on('pageinit', '#geo', function () {
                //
                function onSuccess(position) {
                var element = document.getElementById('geolocation');
-               element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+               
+               document.getElementById("geoImg").src="http://maps.google.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=10&size=540x280&markers=color:red|" + position.coords.latitude +"," + position.coords.longitude + "&sensor=false";
+               
+               element.innerHTML =
+               
+               'Latitude: '           + position.coords.latitude              + '<br />' +
                'Longitude: '          + position.coords.longitude             + '<br />' +
                'Altitude: '           + position.coords.altitude              + '<br />' +
                'Accuracy: '           + position.coords.accuracy              + '<br />' +
@@ -128,24 +133,50 @@ $(document).on('pageinit', '#weather', function () {
                console.log(menu);
                menuPull(pull, menu);
                
-               var query = escape('select item from weather.forecast where location="CAXX0518"'),
-               url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%3D%2220176%22&format=json";
+               onDeviceReady();
                
-               $.getJSON(url, function(response) {
-                         var data = response.query.results.channel.item.condition;
-                         console.log(data);
-                         var cDate = data.date;
-                         var temp = data.temp;
-                         var disc = data.text;
-                         console.log(cDate);
-                         var weather = "<div id=\"weather-data\"><p>" + cDate + "</p><h2>" + temp + "</h2><p>" + disc + "</p></div>";
-                         $("#weather-output").prepend(weather);
+               // PhoneGap is ready
+               //
+               function onDeviceReady() {
+               navigator.geolocation.getCurrentPosition(onSuccess, onError);
+               }
+               
+               // onSuccess Geolocation
+               //
+               function onSuccess(position) {
+               var element = document.getElementById('geolocation');
+               
+               var testUrl = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true"
+               $.getJSON(testUrl, function(test) {
+                         var weatherGeo = test.results[0].address_components[7].short_name;
+                         console.log(position.coords.latitude);
+                         
+                         var query = escape('select item from weather.forecast where location="CAXX0518"'),
+                         url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%3D%22" + weatherGeo + "%22&format=json";
+                         
+                         $.getJSON(url, function(response) {
+                                   var data = response.query.results.channel.item.condition;
+                                   var cDate = data.date;
+                                   var temp = data.temp;
+                                   var disc = data.text;
+                                   console.log(cDate);
+                                   var weather = "<div id=\"weather-data\"><p>" + cDate + "</p><h2>" + temp + "</h2><p>" + disc + "</p></div>";
+                                   $("#weather-output").prepend(weather);
+                                   });
+                         
+                         alert("Here's the weather for: " + weatherGeo);
+                         
                          });
-               
-               alert("Here's the weather for Lansdown");
-               
-               });
+               }
+               function onError(error) {
+               alert('code: '    + error.code    + '\n' +
+                     'message: ' + error.message + '\n');
+               }
 
+                         
+                });
+               
+              
 $(document).on('pageinit', '#research', function () {
                
                var pull = $('#pull6');
@@ -153,6 +184,8 @@ $(document).on('pageinit', '#research', function () {
                var menu = $('#research header nav ul');
                console.log(menu);
                menuPull(pull, menu);
+               
+    
                
                });
 
